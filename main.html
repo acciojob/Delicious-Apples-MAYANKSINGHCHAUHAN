@@ -3,87 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Varieties Portfolio</title>
+    <title>Apple Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #00c776;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background-color: #f5f5f5;
+            height: 100vh;
         }
-        .container {
+        .card {
             display: flex;
-            flex-direction: column;
-            background: #fff;
-            padding: 20px;
+            background-color: white;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 700px;
         }
         .product__photo {
-            text-align: center;
-        }
-        .photo-container {
-            margin-bottom: 20px;
+            background: linear-gradient(to bottom, #b3e892, #a0e57d);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .photo-main img {
-            width: 100%;
-            border-radius: 10px;
+            width: 250px;
+            height: auto;
         }
         .photo-album ul {
             display: flex;
-            justify-content: center;
-            list-style: none;
+            gap: 10px;
             padding: 0;
+            list-style: none;
+            margin-top: 10px;
         }
-        .photo-album li {
-            margin: 5px;
-        }
-        .photo-album img {
+        .photo-album li img {
             width: 50px;
+            height: auto;
             border-radius: 5px;
             cursor: pointer;
         }
+        .product__details {
+            padding: 20px;
+        }
         .price {
-            font-size: 1.5em;
-            color: #d32f2f;
+            font-size: 2rem;
             font-weight: bold;
-            text-align: center;
+            color: #e60000;
             margin: 10px 0;
         }
         .variant {
             display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            background: #eee;
-            border-radius: 5px;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .variant img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #ccc;
         }
         .description {
-            margin-top: 10px;
+            margin: 20px 0;
         }
         .add-to-cart {
-            background: #ff9800;
+            background-color: #ff3d3d;
             color: white;
-            padding: 10px;
-            text-align: center;
+            padding: 10px 20px;
+            border: none;
             border-radius: 5px;
-            font-size: 1.2em;
             cursor: pointer;
-            margin-top: 15px;
+            font-size: 1rem;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="card">
         <div class="product__photo">
-            <div class="photo-container">
-                <div class="photo-main">
-                    <img src="apple-main.jpg" alt="Main Apple">
-                </div>
+            <div class="photo-main">
+                <img src="apple_main.jpg" alt="Green Apple">
             </div>
             <div class="photo-album">
                 <ul>
@@ -93,18 +98,28 @@
                 </ul>
             </div>
         </div>
-        <div class="price">$7.93</div>
-        <div class="variant">
-            <div>Green <a href="#">Link</a></div>
-            <div>Yellow <a href="#">Link</a></div>
-            <div>Orange <a href="#">Link</a></div>
-            <div>Red <a href="#">Link</a></div>
+        <div class="product__details">
+            <h2>Delicious Apples</h2>
+            <p>CODE: 45999</p>
+            <div class="price">R$ 7.93</div>
+            <p><strong>SELECT A COLOR</strong></p>
+            <div class="variant">
+                <img src="green_apple.jpg" alt="Green Apple">
+                <img src="yellow_apple.jpg" alt="Yellow Apple">
+                <img src="orange_apple.jpg" alt="Orange Apple">
+                <img src="red_apple.jpg" alt="Red Apple">
+            </div>
+            <div class="description">
+                <h3>BENEFITS</h3>
+                <ul>
+                    <li>Apples are nutritious</li>
+                    <li>Apples may be good for weight loss</li>
+                    <li>Apples may be good for bone health</li>
+                    <li>They're linked to a lower risk of diabetes</li>
+                </ul>
+            </div>
+            <button class="add-to-cart">ADD TO CART</button>
         </div>
-        <div class="description">
-            <h3>BENEFITS</h3>
-            <p>Apples are rich in fiber, vitamins, and antioxidants. They help improve heart health, regulate blood sugar levels, and support weight loss.</p>
-        </div>
-        <div class="add-to-cart">ADD TO CART</div>
     </div>
 </body>
 </html>
